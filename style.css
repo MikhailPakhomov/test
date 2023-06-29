@@ -54,8 +54,8 @@ ul {
 }
 .nav-item a{
     font-weight: bold;
-    padding-left:30px;
-    padding-right:30px;
+    padding-left:10px;
+    padding-right:10px;
     color: #ffffff;
 }
 .nav-item a:hover{
@@ -144,5 +144,6 @@ ul {
 }
 .code{
     padding: 20px;
+    max-width: 500px;
     background-color:lightgray;
 }
