@@ -6,6 +6,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
+    height: 100%;
     padding: 0;
     margin: 0;
 }
@@ -15,6 +16,18 @@ a {
 
 ul {
     list-style: none;
+    padding: 0;
+}
+.wrapper {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
 }
 .header {
     max-width: 100%;
@@ -38,12 +51,53 @@ ul {
     padding-right:30px;
     color: #ffffff;
 }
-.wrapper {
-    max-width: 1170px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 16px;
-    padding-right: 16px;
+.left-side{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #ffffff;
+    background-color: #000000;
+    flex-basis: 20%;
+    
+}
+.left-side-section{
+    
+    padding: 10px;
+}
+
+.avatar-img{
+    display: block;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+.section-title{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: orange 2px solid;
+}
+.aside-list-item{
+    margin-bottom: 15px;
+}
+.aside-list-item a{
+    color:#ffffff;
+}
+.aside-list-item a:hover{
+    color:orange;
+}
+.aside-list-item::before{
+    content:"";
+    width: 5px;
+    height: 5px;
+    background-color: orange;
+}
+.aside-list-item-title{
+    font-size: 18px;
+    font-weight: 600;
+}
+.aside-list-item-subtitle{
+    font-size: 12px;
 }
