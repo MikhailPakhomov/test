@@ -58,7 +58,9 @@ ul {
     padding-right:30px;
     color: #ffffff;
 }
-
+.nav-item a:hover{
+    color: orange;
+}
 
 /* ASIDE */
 
@@ -86,6 +88,7 @@ ul {
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
+    text-transform: uppercase;
     border-bottom: orange 2px solid;
 }
 .aside-list-item{
@@ -121,5 +124,8 @@ ul {
 }
 .fullname{
     width: 100%;
+    margin-top: 60px;
+    padding: 40px 40px 40px 40px;
+    text-transform: uppercase;
     background-color: lemonchiffon;
 }
