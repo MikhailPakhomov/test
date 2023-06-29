@@ -55,11 +55,52 @@
                 <h1>Mikhail Pakhomov</h1>
                 <div>Junior Front-End Developer</div>
         </div>
-        <!-- <section class="about">About me</section>
-        <section>Experience</section>
-        <section>Code Example</section>
-        <section>Skills</section>
-        <section>Language</section> -->
+        <section id="about" class="main-section">
+            <h2>About me</h2>
+            <p>I work as a communications engineer for an integrator company. I am engaged in the maintenance of PBX, dispatch communication systems, video surveillance systems. I've always been interested in programming. I had experience learning C, C++, PHP. But at the moment I realized for myself that I am interested in the frontend. I hope I will be able to learn to be a front-end developer.</p>
+        </section>
+        <section id="experience" class="main-section">
+            <h2>Experience</h2>
+            <ul class="main-list">
+                <li class="main-list-item"><a href="https://github.com/MikhailPakhomov/social-network">Social Network (learning project) (HTML, CSS, JS, React, Redux, FLUX)</a></li>
+            </ul>
+        </section>
+        <section id="code-example" class="main-section">
+            <h2>Code Example</h2>
+            <pre class="code">
+                <code>
+// get radiostations list
+
+const url = "https://de1.api.radio-browser.info/json/stations/search?countrycode=RU&limit=100&offset=0&hidebroken=true";
+
+const [stations, setStations] = useState([]);
+
+useEffect( () => {
+    axios
+        .get(url)
+        .then( (response) => {
+            setStations(response.data);
+        })
+}, []);
+                </code>
+            </pre>
+        </section>
+        <section id="skills" class="main-section">
+            <h2>Skills</h2>
+            <ul class="main-list">
+                <li class="main-list-item">HTML</li>
+                <li class="main-list-item">CSS</li>
+                <li class="main-list-item">JS (basic)</li>
+                <li class="main-list-item">React (basic)</li>
+            </ul>
+        </section>
+        <section id="language" class="main-section">
+            <h2>Language</h2>
+            <ul class="main-list">
+                <li class="main-list-item">Russian</li>
+                <li class="main-list-item">English (reading technical documentation with a translator)</li>
+            </ul>
+        </section> 
       </main>
   </div>
   

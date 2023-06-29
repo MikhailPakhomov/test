@@ -120,7 +120,6 @@ ul {
     display: flex;
     flex-direction: column;
     
-    flex-grow: 1;
 }
 .fullname{
     width: 100%;
@@ -128,4 +127,22 @@ ul {
     padding: 40px 40px 40px 40px;
     text-transform: uppercase;
     background-color: lemonchiffon;
+}
+.main-section{
+    padding: 10px 40px 10px 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.main-section h2{
+    text-transform: uppercase;
+}
+.main-list{
+
+}
+.main-list-item{
+
+}
+.code{
+    padding: 20px;
+    background-color:lightgray;
 }
