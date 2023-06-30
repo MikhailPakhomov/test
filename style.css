@@ -57,6 +57,7 @@ ul {
     padding-left:10px;
     padding-right:10px;
     color: #ffffff;
+    transition: color 0.5s ease-out;
 }
 .nav-item a:hover{
     color: orange;
@@ -96,6 +97,7 @@ ul {
 }
 .aside-list-item a{
     color:#ffffff;
+    transition: color 0.5s ease-out;
 }
 .aside-list-item a:hover{
     color:orange;
@@ -139,11 +141,70 @@ ul {
 .main-list{
 
 }
+.main-list li::before{
+    display: block;
+    position: relative;
+    top: 18px;
+    left: -30px;
+    content: "";
+    width: 25px;
+    height: 14px;
+    background-color: orange;
+}
 .main-list-item{
-
+ padding-left: 20px;
+}
+.main-list-item a{
+    transition: color 0.5s ease-out;
+    color: black;
+}
+.main-list-item a:hover{
+    color: orange;
 }
 .code{
     padding: 20px;
     max-width: 500px;
     background-color:lightgray;
+}
+.footer{
+    display: flex;
+    max-width: 100%;
+
+    align-items: center;
+    background-color: black;
+    color:#ffffff;
+}
+.footer-img-logo{
+    padding: 5px;
+    width: 110px;
+    height: 40px;
+    background-image: url(./assets/img/rsschool-logo-white.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background-image 0.5s ease-out;
+}
+.footer-img-logo:hover{
+    background-image: url(./assets/img/rsschool-logo-orange.svg);
+}
+.footer-link-logo{
+    display: block;
+    padding: 10px;
+    margin-right: auto;
+    margin-left: 40px;
+    color: #ffffff;
+}
+.footer-link{
+    display: block;
+    padding: 10px;
+    color: #ffffff;
+    font-weight:700;
+    transition: color 0.5s ease-out;
+}
+.footer-link:hover{
+    color: orange;
+}
+.footer-year{
+    padding: 5px;
+    margin-right: auto;
+    font-weight:500;
 }
