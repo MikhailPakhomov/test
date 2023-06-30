@@ -37,13 +37,16 @@ ul {
 /* HEADER */
 
 .header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     max-width: 100%;
     background-color: black;
+    height: 50px;
+    padding-right: 20px;
 }
 .nav {
     max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
     padding-left: 16px;
     padding-right: 16px;
 }
@@ -63,6 +66,102 @@ ul {
     color: orange;
 }
 
+.nav-mobile {
+    z-index: 9;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.nav-mobile-button{
+    position: fixed;
+    z-index: 10;
+    display: none;
+    height: 25px;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+.nav-mobile-button-icon {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 4px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+.nav-mobile-button-icon::before{
+    top: -10px;
+    left: 0;
+    position: absolute;
+    content: "";
+    display: block;
+    width: 30px;
+    height: 4px;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+.nav-mobile-button-icon::after{
+    bottom: -10px;
+    left: 0;
+    position: absolute;
+    content: "";
+    display: block;
+    width: 30px;
+    height: 4px;
+    border-radius: 10px;
+    background-color: #ffffff;
+
+}
+.nav-mobile-button-close .nav-mobile-button-icon {
+    background-color: transparent;
+}
+.nav-mobile-button-close .nav-mobile-button-icon::before {
+    transform: rotate(45deg);
+    top:0
+}
+.nav-mobile-button-close .nav-mobile-button-icon::after {
+    transform: rotate(-45deg);
+    top:0
+}
+.nav-mobile{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 371px;
+    height: 100%;
+    background-color: #000000cf;
+}
+.nav-mobile-active{
+    display: block;
+}
+
+.nav-mobile-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    margin: 39px 10px;
+}
+.nav-mobile-item{
+    margin-bottom: 20px;
+}
+.nav-mobile-item a{
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ffffff;
+    transition: color 0.5s ease-out;
+}
+.nav-mobile-item a:hover{
+    color: orange;
+}
+
+
 /* ASIDE */
 
 .left-side{
@@ -78,6 +177,8 @@ ul {
 }
 .left-side-section{
     padding: 10px;
+    max-width: 350px;
+    width: 100%;
 }
 .avatar-img{
     display: block;
@@ -94,6 +195,7 @@ ul {
 }
 .aside-list-item{
     margin-bottom: 15px;
+    padding-left: 15px;
 }
 .aside-list-item a{
     color:#ffffff;
@@ -130,6 +232,16 @@ ul {
     text-transform: uppercase;
     background-color: lemonchiffon;
 }
+.fullname-mobile{
+    text-align: center;
+    display: none;
+    width: 100%;
+    margin-top: 10px;
+    padding: 40px 40px 40px 40px;
+    text-transform: uppercase;
+    color: #000000;
+    background-color: lemonchiffon;
+}
 .main-section{
     padding: 10px 40px 10px 40px;
     margin-top: 10px;
@@ -141,19 +253,23 @@ ul {
 .main-list{
 
 }
-.main-list li::before{
-    display: block;
+.main-list-item{
     position: relative;
-    top: 18px;
-    left: -30px;
+    z-index: 8;
+    padding-left: 40px;
+}
+.main-list-item::before{
+    display: block;
+    position:absolute;
+    z-index: 0;
     content: "";
+    top: 5px;
+    left: 0;
     width: 25px;
     height: 14px;
     background-color: orange;
 }
-.main-list-item{
-    padding-left: 40px;
-}
+
 .main-list-item a{
     transition: color 0.5s ease-out;
     color: black;
@@ -225,15 +341,15 @@ ul {
         justify-content: center;
     }
     .avatar-img{
-        width: 140px;
-        height: 140px;
+        width: 165px;
+        height: 165px;
     }
 }
 @media  screen and (min-width : 320px) and (max-width : 767px){
     .nav-list{
         display: none;
     }
-    .nav-mobile{
+    .nav-mobile-button{
         display: block;
     }
     .wrapper {
@@ -241,12 +357,18 @@ ul {
         display: block;
         padding: 0;
     }
+    .left-side{
+        padding: 0;
+    }
     .avatar-img{
         width: 140px;
         height: 140px;
     }
     .fullname {
-        margin: 0;
+        display: none;
+    }
+    .fullname-mobile {
+        display: block;
     }
     .code{
         display: none;
