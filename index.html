@@ -19,6 +19,7 @@
             <li class="nav-item"><a href="#education">Education</a></li>
             <li class="nav-item"><a href="#language">Language</a></li>
         </ul>
+        <div class="nav-mobile"></div>
     </nav>
   </header>
   <div class="wrapper">
@@ -72,6 +73,25 @@
 // get radiostations list
 
 const url = "https://de1.api.radio-browser.info/json/stations/";
+
+const [stations, setStations] = useState([]);
+
+useEffect( () => {
+    axios
+        .get(url)
+        .then( (response) => {
+            setStations(response.data);
+        })
+}, []);
+                </code>
+            </pre>
+            <pre class="code-mobile">
+                <code>
+// get radiostations list
+
+const url = 
+"https://de1.api.radio-browser.info/json/stations/"
+;
 
 const [stations, setStations] = useState([]);
 
