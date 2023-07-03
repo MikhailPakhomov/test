@@ -269,7 +269,6 @@ ul {
     height: 14px;
     background-color: orange;
 }
-
 .main-list-item a{
     transition: color 0.5s ease-out;
     color: black;

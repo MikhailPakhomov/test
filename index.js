@@ -22,6 +22,7 @@ window.addEventListener('click', () => {
         navButton.classList.toggle('nav-mobile-button-close');
     }
 })
+
 navMobile.addEventListener('click', (event) => {
     event.stopImmediatePropagation()
 })
